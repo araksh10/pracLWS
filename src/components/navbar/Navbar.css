@@ -1,0 +1,17 @@
+.redLogo {
+    /* background-color: #533; */
+    border-radius: 100%;
+    animation: animateLogo 5s linear infinite;
+}
+
+@keyframes animateLogo {
+    from {
+        transform: rotate(0deg);
+        box-shadow: 0px 0px 20px rgb(255, 115, 0);
+    }
+    to { 
+        transform: rotate(360deg);
+        box-shadow: 0px 0px 20px rgb(255, 187, 131);
+
+    }
+}
