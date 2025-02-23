@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import VideoGridItem from "./VideoGridItem";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchVideos } from "../../features/videos/VideosSlice";
-import { render } from "react-dom";
 import Loading from "../ui/Loading";
 
 export default function VideoGrid() {
@@ -10,10 +9,11 @@ export default function VideoGrid() {
 	const { videos, isLoading, isError, error } = useSelector(
 		(state) => state.videos
 	);
+	const { tags, search } = useSelector((state) => state.filter);
 
 	useEffect(() => {
-		dispatch(fetchVideos());
-	}, [dispatch]);
+		dispatch(fetchVideos({ tags, search }));
+	}, [dispatch, tags, search]);
 
 	// What to render
 	let content;

@@ -1,6 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-// import { getVideos } from "./VideosAPI";
-// import { searchForWorkspaceRoot } from "vite";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
 	tags: [],
